@@ -1,16 +1,19 @@
-<div class="content-row" *ngIf="characterData">
-  <span>Name: {{characterData.name}}</span>
-  <span>Gender: {{characterData.gender}}</span>
-  <span>Birth Year: {{characterData.birth_year}}</span>
-</div>
+<div class="container" *ngIf="characterData">
 
-<div class="content-row-2" *ngIf="characterData">
-  <span>Height: {{characterData.height}}</span>
-  <span>Weight: {{characterData.mass}}</span>
-</div>
+  <div class="content-row">
+    <span>Name: {{characterData.name}}</span>
+    <span>Gender: {{characterData.gender}}</span>
+    <span>Birth Year: {{characterData.birth_year}}</span>
+  </div>
 
-<div class="content-row" *ngIf="characterData">
-  <span>Eye color: {{characterData.eye_color}}</span>
-  <span>Hair color: {{characterData.hair_color}}</span>
-  <span>Skin color: {{characterData.skin_color}}</span>
+  <div class="content-row">
+    <span>Height: {{characterData.height}}</span>
+    <span>Weight: {{characterData.mass}}</span>
+  </div>
+
+  <div class="content-row">
+    <span>Eye color: {{characterData.eye_color}}</span>
+    <span>Hair color: {{characterData.hair_color}}</span>
+    <span>Skin color: {{characterData.skin_color}}</span>
+  </div>
 </div>
