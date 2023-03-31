@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {swCharacter} from "../starwars/sw.types";
 
 @Component({
   selector: 'app-starwars-character',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./starwars-character.component.scss']
 })
 export class StarwarsCharacterComponent {
+
+  @Input()
+  characterData?: swCharacter;
 
 }

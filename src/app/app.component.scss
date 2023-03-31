@@ -1,0 +1,15 @@
+.page-layout {
+  width: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
+  margin: 0;
+  display: block;
+}
+
+.content {
+  max-width: var(--content-width);
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin: 0 auto;
+}

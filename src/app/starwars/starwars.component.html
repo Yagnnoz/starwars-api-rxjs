@@ -1,1 +1,14 @@
-<p>starwars works!</p>
+<mat-form-field appearance="fill">
+  <mat-label>Charactername</mat-label>
+  <input matInput placeholder="e.g. Luke" [(ngModel)]="searchTerm" (input)="setNewSeachTerm(searchTerm)">
+</mat-form-field>
+
+<div class="display-searchTerm">
+  <p>You searched for: {{searchTerm}}</p>
+</div>
+
+<div *ngIf="data$|async as data">
+  <div *ngFor="let element of data">
+    <app-starwars-character [characterData]="element"></app-starwars-character>
+  </div>
+</div>
