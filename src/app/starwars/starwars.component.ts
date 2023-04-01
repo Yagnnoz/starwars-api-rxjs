@@ -20,9 +20,10 @@ export class StarwarsComponent {
   data$: Observable<swCharacter[]> = this.swService.result$
     .pipe(
       tap((v: swCharacter[]) => console.log(v)),
+
     );
 
-  setNewSeachTerm(term: string): void {
+  setNewSearchTerm(term: string): void {
     console.log(`new searchTerm is  "${term}"`);
     this.swService.setTerm(term);
   }
