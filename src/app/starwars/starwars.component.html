@@ -8,7 +8,7 @@
 </div>
 
 <div *ngIf="data$|async as data">
-  <div *ngFor="let element of data">
+  <div *ngFor="let element of data" class="character-container">
     <app-starwars-character [characterData]="element"></app-starwars-character>
   </div>
 </div>

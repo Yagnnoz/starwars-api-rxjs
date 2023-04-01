@@ -1,9 +1,17 @@
 .content-row {
   display: flex;
-  justify-content: space-evenly;
-  padding: 12px 0;
+  justify-content: flex-start;
+  padding: 12px;
+  gap: 12px;
 }
 
 .container {
-  border: 1px solid darkorchid;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid darkorchid;
+  border-radius: 20px;
+}
+
+.name {
+  font-size: 1.5em;
 }

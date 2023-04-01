@@ -1,9 +1,12 @@
 <div class="container" *ngIf="characterData">
 
+  <div class="content-row heading">
+    <span class="name">{{characterData.name}}</span>
+  </div>
+
   <div class="content-row">
-    <span>Name: {{characterData.name}}</span>
-    <span>Gender: {{characterData.gender}}</span>
     <span>Birth Year: {{characterData.birth_year}}</span>
+    <span>Gender: {{characterData.gender}}</span>
   </div>
 
   <div class="content-row">
