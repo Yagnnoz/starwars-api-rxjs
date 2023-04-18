@@ -1,11 +1,11 @@
 export type swCharacter = {
   name: string;
   birth_year: string;
-  height: number;
+  height: string;
   eye_color: string;
   gender: string;
   hair_color: string;
-  mass: number;
+  mass: string;
   skin_color: string;
 }
 
