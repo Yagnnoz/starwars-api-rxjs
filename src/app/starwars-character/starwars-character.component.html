@@ -19,4 +19,26 @@
     <span>Hair color: {{characterData.hair_color}}</span>
     <span>Skin color: {{characterData.skin_color}}</span>
   </div>
+  <div class="content-row">
+    <span>Homeworld: {{characterData.homeworld}}</span>
+  </div>
+
+  <div class="ship-container" *ngIf="characterData.starships.length > 0">
+    <span>Ships:</span>
+    <ul>
+      <li *ngFor="let ship of characterData.starships">
+        {{ship}}
+      </li>
+    </ul>
+  </div>
+
+  <div class="ship-container" *ngIf="characterData.films.length > 0">
+    <span>Appeared in</span>
+    <ul>
+      <li *ngFor="let movie of characterData.films"> <!-- change to movieData -->
+   <!--        <span>Episode {{movie.episode_id}} - {{movie.title}}</span>-->
+        {{movie}}
+      </li>
+    </ul>
+  </div>
 </div>

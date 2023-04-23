@@ -1,4 +1,4 @@
-export type swCharacter = {
+export type Character = {
   name: string;
   birth_year: string;
   height: string;
@@ -7,8 +7,25 @@ export type swCharacter = {
   hair_color: string;
   mass: string;
   skin_color: string;
+  homeworld: string;
+  starships: string[];
+  films: string[];
+  movieData: Movie[];
 }
 
-export type swAPIResponse = {
-  results: swCharacter[];
+export type APIResponse = {
+  results: Character[];
+}
+
+export type Homeworld = {
+  name: string;
+}
+
+export type Starship = {
+  name: string;
+}
+
+export type Movie = {
+  title: string;
+  episode_id: number;
 }
