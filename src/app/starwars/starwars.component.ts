@@ -1,12 +1,12 @@
-import {Component} from '@angular/core';
-import {StarWarsAPIService} from "./star-wars-api.service";
-import {BehaviorSubject, Observable, tap} from "rxjs";
-import {Character} from "./sw.types";
+import { Component } from '@angular/core';
+import { StarWarsAPIService } from './star-wars-api.service';
+import { BehaviorSubject, debounceTime, distinctUntilChanged, filter, Observable, switchMap, take, tap } from 'rxjs';
+import { Character } from './sw.types';
 
 @Component({
   selector: 'app-starwars',
   templateUrl: './starwars.component.html',
-  styleUrls: ['./starwars.component.scss']
+  styleUrls: ['./starwars.component.scss'],
 })
 export class StarwarsComponent {
 
@@ -15,12 +15,9 @@ export class StarwarsComponent {
   constructor(private swService: StarWarsAPIService) {
   }
 
-  search$: BehaviorSubject<string> = this.swService.search$;
-
   data$: Observable<Character[]> = this.swService.characters$
     .pipe(
       tap((v: Character[]) => console.log(v)),
-
     );
 
   setNewSearchTerm(term: string): void {

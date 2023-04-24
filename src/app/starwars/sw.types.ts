@@ -7,25 +7,8 @@ export type Character = {
   hair_color: string;
   mass: string;
   skin_color: string;
-  homeworld: string;
-  starships: string[];
-  films: string[];
-  movieData: Movie[];
 }
 
-export type APIResponse = {
+export type CharacterAPIResponse = {
   results: Character[];
-}
-
-export type Homeworld = {
-  name: string;
-}
-
-export type Starship = {
-  name: string;
-}
-
-export type Movie = {
-  title: string;
-  episode_id: number;
 }
