@@ -1,4 +1,6 @@
-export type Character = {
+export type ApiURL = `https://${string}`
+
+export type CharacterDTO = {
   name: string;
   birth_year: string;
   height: string;
@@ -7,14 +9,16 @@ export type Character = {
   hair_color: string;
   mass: string;
   skin_color: string;
-  homeworld: string;
+  homeworld: ApiURL;
   starships: string[];
   films: string[];
   movieData: Movie[];
 }
 
+// characterVM
+
 export type APIResponse = {
-  results: Character[];
+  results: CharacterDTO[];
 }
 
 export type Homeworld = {

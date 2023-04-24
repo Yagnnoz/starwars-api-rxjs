@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {StarWarsAPIService} from "./star-wars-api.service";
 import {BehaviorSubject, Observable, tap} from "rxjs";
-import {Character} from "./sw.types";
+import {CharacterDTO} from "./sw.types";
 
 @Component({
   selector: 'app-starwars',
@@ -17,9 +17,9 @@ export class StarwarsComponent {
 
   search$: BehaviorSubject<string> = this.swService.search$;
 
-  data$: Observable<Character[]> = this.swService.characters$
+  data$: Observable<CharacterDTO[]> = this.swService.characters$
     .pipe(
-      tap((v: Character[]) => console.log(v)),
+      tap((v: CharacterDTO[]) => console.log(v)),
 
     );
 

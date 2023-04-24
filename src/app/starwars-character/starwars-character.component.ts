@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Character} from "../starwars/sw.types";
+import {CharacterDTO} from "../starwars/sw.types";
 
 @Component({
   selector: 'app-starwars-character',
@@ -9,6 +9,6 @@ import {Character} from "../starwars/sw.types";
 export class StarwarsCharacterComponent {
 
   @Input()
-  characterData?: Character;
+  characterData?: CharacterDTO;
 
 }
